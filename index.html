@@ -7,97 +7,88 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Roboto', sans-serif; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white ">
 
   <!-- Header fixo -->
-  <header class="fixed top-0 left-0 w-full bg-black bg-opacity-80 border-b border-blue-900 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-xl font-bold text-white">CidTec - Informática</h1>
-      
-      <nav class="space-x-4 text-sm">
-        <a href="#servicos" class="hover:text-blue-400">Serviços</a>
-        <a href="#catalogo" class="hover:text-blue-400">Catálogo</a>
-        <a href="#porque" class="hover:text-blue-400">Por que nós?</a>
-      </nav>
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm border-b border-blue-900 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+
+    <!-- Logo estilizada + Nome -->
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center shadow-inner ring-2 ring-blue-500">
+        <img src="imgs/logo.png" alt="CidTec Logo" class="w-7 h-7 object-contain rounded-full" />
+      </div>
+      <span class="text-xl font-extrabold tracking-widest text-white drop-shadow-md">CIDTEC</span>
     </div>
-  </header>
+
+    <!-- Navegação -->
+    <nav class="flex gap-8">
+      <a href="#servicos" class="text-white text-xl font-semibold relative group ">
+        Serviços
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#porque" class="text-white text-xl font-semibold relative group">
+        Por que nós?
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-black to-blue-950 pt-24">
-    <img src="imgs/logo.jpg" class="w-[180px] h-auto rounded-3xl pb-5" />
+  <section class="py-16 flex flex-col items-center text-center px-4 bg-gradient-to-b from-blue-950 to-black">
+    <img src="imgs/logo.png" class="w-[540px] h-auto rounded-3xl pb-5" />
     <h2 class="text-4xl md:text-6xl font-bold mb-4" style="text-shadow: 5px 3px 5px #000;">Soluções em Informática</h2>
     <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl" >Na CidTec, resolvemos seus problemas com tecnologia com rapidez, transparência e excelência.</p>
-    <a href="https://wa.me/5599999999999" target="_blank" id="catalogo"
+    <a href="https://wa.me/c/556896043885" target="_blank"
        class="bg-blue-600 hover:bg-blue-700 px-10 py-3 rounded-xl text-lg font-semibold transition transform hover:scale-105 shadow-lg" >
         Confira nosso catálogo 
     </a>
   </section>
 
-  <!-- Carrossel -->
-  <section class="py-16 bg-black px-6">
-  <h2 class="text-3xl font-bold text-center text-white mb-8">Alguns dos nossos produtos</h2>
-
-  <div class="relative max-w-6xl mx-auto">
-    <!-- Botão Esquerda -->
-    <button onclick="scrollCarousel(-1)" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-blue-800 p-3 rounded-full hover:bg-blue-700">
-      ◀
-    </button>
-
-    <!-- Container de Imagens -->
-    <div id="carousel" class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-10 pb-4">
-      <img src="imgs/pcs/pc1.jpeg" class="h-48 object-cover rounded-lg flex-shrink-0 snap-start" />
-      <img src="imgs/pcs/pc2.jpeg" class="h-48 object-cover rounded-lg flex-shrink-0 snap-start" />
-      <img src="imgs/pcs/pc3.jpeg" class="h-48 object-cover rounded-lg flex-shrink-0 snap-start" />
-      <img src="imgs/pcs/pc4.jpeg" class="h-48 object-cover rounded-lg flex-shrink-0 snap-start" />
-      <img src="imgs/pcs/pc5.jpeg" class="h-48 object-cover rounded-lg flex-shrink-0 snap-start" />
-      <img src="imgs/pcs/pc6.jpeg" class="h-48 object-cover rounded-lg flex-shrink-0 snap-start" />
-      <img src="imgs/pcs/pc7.jpeg" class="h-48 object-cover rounded-lg flex-shrink-0 snap-start" />
-      <img src="imgs/pcs/pc8.jpeg" class="h-48 object-cover rounded-lg flex-shrink-0 snap-start" />
-    </div>
-
-    <!-- Botão Direita -->
-    <button onclick="scrollCarousel(1)" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-blue-800 p-3 rounded-full hover:bg-blue-700">
-      ▶
-    </button>
-  </div>
-</section>
-
-<script>
-  function scrollCarousel(direction) {
-    const container = document.getElementById('carousel');
-    const scrollAmount = 300;
-    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-  }
-</script>
-
 
   <!-- Serviços -->
-  <section class="py-16 px-6 bg-black">
+  <section class="py-16 px-6 bg-black" id="servicos">
     <h2 class="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div class="bg-blue-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Vendas de Peças e Acessórios 🛒</h3>
-        <p class="text-gray-300">Componentes originais com garantia e entrega rápida, temos os melhores preços da região!</p>
+        <h3 class="text-3xl font-semibold mb-2">Vendas de Peças e Acessórios 🛒</h3>
+        <p class="text-gray-300 text-xl">Componentes originais com garantia e entrega rápida, temos os melhores preços da região!</p>
+        
       </div>
       <div class="bg-blue-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Manutenção no geral 🛠️</h3>
-        <p class="text-gray-300">Formatação, limpeza geral ou de componentes específicos, upgrades e diagnósticos rápidos.</p>
+        <h3 class="text-3xl font-semibold mb-2">Manutenção no geral 🛠️</h3>
+        <p class="text-gray-300 text-xl">Formatação, limpeza geral ou de componentes específicos, upgrades e diagnósticos rápidos.</p>
       </div>
       <div class="bg-blue-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Atualização de BIOS 🛒</h3>
-        <p class="text-gray-300">Quer atualizar suas BIOS com segurança? Vem com a CidTec!</p>
+        <h3 class="text-3xl font-semibold mb-2">Atualização de BIOS 🛒</h3>
+        <p class="text-gray-300 text-xl">Quer atualizar suas BIOS com segurança? Vem com a CidTec!</p>
       </div>
     </div>
   </section>
 
+  <section id="porque" class="py-16 flex flex-col items-center text-center px-4 bg-gradient-to-b from-black to-blue-950">
+    <a href="https://www.google.com/maps/place/CidTec+Inform%C3%A1tica" target="_blank">
+    <h2 class="text-3xl font-bold text-center mb-12">Veja o que nossos clientes dizem no Google ⭐⭐⭐⭐⭐</h2>
+  </a>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-32cc3752-3692-4641-b727-4e42d39dfb6c" data-elfsight-app-lazy></div>
+  </section>
+  
+
   <!-- Rodapé -->
   <footer class="py-6 text-center text-gray-500 bg-black border-t border-blue-900">
     <p>&copy; 2025 CidTec Informática. Todos os direitos reservados.</p>
+    
   </footer>
+
+  <script>
+  console.log("Procurando algo? Talvez eu já soubesse que você viria aqui.");
+</script>
+
 
 </body>
 </html>
