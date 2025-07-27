@@ -9,86 +9,74 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-black text-white ">
+<body class="bg-black text-white">
 
-  <!-- Header fixo -->
   <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm border-b border-blue-900 shadow-md">
-  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
-    <!-- Logo estilizada + Nome -->
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-full flex items-center justify-center shadow-inner ring-2 ring-blue-500">
-        <img src="imgs/logo2.jpg" alt="CidTec Logo" class="w-7 h-7 object-contain rounded-full" />
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center shadow-inner ring-2 ring-blue-500">
+          <img src="imgs/logo2.jpg" alt="CidTec Logo" class="w-7 h-7 object-contain rounded-full" />
+        </div>
+        <span class="text-xl font-extrabold tracking-widest text-white drop-shadow-md">CIDTEC</span>
       </div>
-      <span class="text-xl font-extrabold tracking-widest text-white drop-shadow-md">CIDTEC</span>
+
+      <nav class="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
+        <a href="#servicos" class="text-white text-xl font-semibold relative group">
+          Serviços
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#porque" class="text-white text-xl font-semibold relative group">
+          Por que nós?
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Navegação -->
-    <nav class="flex gap-8">
-      <a href="#servicos" class="text-white text-xl font-semibold relative group ">
-        Serviços
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#porque" class="text-white text-xl font-semibold relative group">
-        Por que nós?
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-    </nav>
-  </div>
-</header>
-
-
-  <!-- Hero -->
-  <section class="py-16 flex flex-col items-center text-center px-4 bg-gradient-to-b from-blue-950 to-black">
-    <img src="imgs/logo2.png" class="w-[540px] h-auto rounded-3xl pb-5" />
-    <h2 class="text-4xl md:text-6xl font-bold mb-4" style="text-shadow: 5px 3px 5px #000;">Soluções em Informática</h2>
-    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl" >Na CidTec, resolvemos seus problemas com tecnologia com rapidez, transparência e excelência.</p>
+  <section class="pt-32 pb-16 flex flex-col items-center text-center px-4 bg-gradient-to-b from-blue-950 to-black">
+    <img src="imgs/logo2.png" class="w-full max-w-xs md:max-w-lg h-auto rounded-3xl pb-5" />
+    <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 drop-shadow-md">Soluções em Informática</h2>
+    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">Na CidTec, resolvemos seus problemas com tecnologia com rapidez, transparência e excelência.</p>
     <a href="https://wa.me/c/556896043885" target="_blank"
-       class="bg-blue-600 hover:bg-blue-700 px-10 py-3 rounded-xl text-lg font-semibold transition transform hover:scale-105 shadow-lg" >
-        Confira nosso catálogo 
+       class="bg-blue-600 hover:bg-blue-700 px-10 py-3 rounded-xl text-lg font-semibold transition transform hover:scale-105 shadow-lg">
+      Confira nosso catálogo
     </a>
   </section>
 
-
-  <!-- Serviços -->
   <section class="py-16 px-6 bg-black" id="servicos">
     <h2 class="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div class="bg-blue-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-3xl font-semibold mb-2">Vendas de Peças e Acessórios 🛒</h3>
-        <p class="text-gray-300 text-xl">Componentes originais com garantia e entrega rápida, temos os melhores preços da região!</p>
-        
+        <h3 class="text-2xl md:text-3xl font-semibold mb-2">Vendas de Peças e Acessórios 🛒</h3>
+        <p class="text-gray-300 text-lg md:text-xl">Componentes originais com garantia e entrega rápida, temos os melhores preços da região!</p>
       </div>
       <div class="bg-blue-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-3xl font-semibold mb-2">Manutenção no geral 🛠️</h3>
-        <p class="text-gray-300 text-xl">Formatação, limpeza geral ou de componentes específicos, upgrades e diagnósticos rápidos.</p>
+        <h3 class="text-2xl md:text-3xl font-semibold mb-2">Manutenção no geral 🛠️</h3>
+        <p class="text-gray-300 text-lg md:text-xl">Formatação, limpeza geral ou de componentes específicos, upgrades e diagnósticos rápidos.</p>
       </div>
       <div class="bg-blue-900 p-6 rounded-xl shadow-lg">
-        <h3 class="text-3xl font-semibold mb-2">Atualização de BIOS 🛒</h3>
-        <p class="text-gray-300 text-xl">Quer atualizar suas BIOS com segurança? Vem com a CidTec!</p>
+        <h3 class="text-2xl md:text-3xl font-semibold mb-2">Atualização de BIOS 🛒</h3>
+        <p class="text-gray-300 text-lg md:text-xl">Quer atualizar suas BIOS com segurança? Vem com a CidTec!</p>
       </div>
     </div>
   </section>
 
   <section id="porque" class="py-16 flex flex-col items-center text-center px-4 bg-gradient-to-b from-black to-blue-950">
     <a href="https://www.google.com/maps/place/CidTec+Inform%C3%A1tica" target="_blank">
-    <h2 class="text-3xl font-bold text-center mb-12">Veja o que nossos clientes dizem no Google ⭐⭐⭐⭐⭐</h2>
-  </a>
+      <h2 class="text-3xl font-bold text-center mb-12">Veja o que nossos clientes dizem no Google ⭐⭐⭐⭐⭐</h2>
+    </a>
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-32cc3752-3692-4641-b727-4e42d39dfb6c" data-elfsight-app-lazy></div>
+    <div class="elfsight-app-32cc3752-3692-4641-b727-4e42d39dfb6c" data-elfsight-app-lazy></div>
   </section>
-  
 
-  <!-- Rodapé -->
-  <footer class="py-6 text-center text-gray-500 bg-black border-t border-blue-900">
+  <footer class="py-6 px-4 text-center text-gray-500 bg-black border-t border-blue-900">
     <p>&copy; 2025 CidTec Informática. Todos os direitos reservados.</p>
-    
   </footer>
 
   <script>
-  console.log("Procurando algo? Talvez eu já soubesse que você viria aqui.");
-</script>
-
+    console.log("Procurando algo? Talvez eu já soubesse que você viria aqui.");
+  </script>
 
 </body>
 </html>
